@@ -1,0 +1,23 @@
+name: FastAPI CI Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Hello World
+        run: echo "Hello World"
+
+  bye:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Goodbye World
+        run: echo "Goodbye World"
