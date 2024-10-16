@@ -32,6 +32,3 @@ jobs:
       - name: Test with pytest
         run: |
           pytest
- 
- 
-    Enter fullscreen mode
