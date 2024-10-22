@@ -10,7 +10,10 @@ def multiply(a, b):
     return a * b
 
 def divide(a, b):
-    return (a / b)
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return "You can't divide by zero!"
 
 
 print(add(1, 2))  # 3
