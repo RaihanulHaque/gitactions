@@ -1,0 +1,33 @@
+name: Python Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10" # or whatever version you're using
+
+      # Install dependencies
+      - name: Install dependencies
+        run: | # This is a multiline command
+          pip install -r requirements.txt  # if you have a requirements.txt file
+
+      # Run pytest
+      - name: Run tests
+        run: pytest
